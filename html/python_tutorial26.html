@@ -1,0 +1,1277 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Machine Learning Project &#8212; FSU Libraries Python Tutorial</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="More Pandas" href="python_tutorial24.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/FSU.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">FSU Libraries Python Tutorial</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the FSU Libraries Python Tutorial!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial1.html">
+   Basics: Printing and Basic Arithmetic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial2.html">
+   Quick Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial3.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial4.html">
+   Inputting Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial5.html">
+   Exercise 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial6.html">
+   Lists and Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial7.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial8.html">
+   Numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial9.html">
+   If Statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial10.html">
+   Exercise 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial11.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial12.html">
+   Exercise 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial13.html">
+   Arrays, Functions, and Nested Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial15.html">
+   Exercise 5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial16.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial17.html">
+   Exercise 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial18.html">
+   Dates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial19.html">
+   Try and Except Statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial20.html">
+   Classes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial22.html">
+   Hangman Exercise (Exercise 7)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial23.html">
+   Files and Directories
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_tutorial24.html">
+   More Pandas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Machine Learning Project
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/python_tutorial26.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpython_tutorial26.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/python_tutorial26.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Machine Learning Project</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="machine-learning-project">
+<h1>Machine Learning Project<a class="headerlink" href="#machine-learning-project" title="Permalink to this headline">#</a></h1>
+<p>For this project, we’ll be taking an online data set and trying to predict whether or not a person is biologically male or female given certain facial features. This data set is available at <a class="reference external" href="https://www.kaggle.com/datasets/elakiricoder/gender-classification-dataset">https://www.kaggle.com/datasets/elakiricoder/gender-classification-dataset</a></p>
+<p>First, you’ll want to download this data set and save it to your working directory as ‘gender_classification_v7.csv’. Then, we can read it in as a pandas data frame called gender_df through the following command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gender_classification_v7.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>long_hair</th>
+      <th>forehead_width_cm</th>
+      <th>forehead_height_cm</th>
+      <th>nose_wide</th>
+      <th>nose_long</th>
+      <th>lips_thin</th>
+      <th>distance_nose_to_lip_long</th>
+      <th>gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>11.8</td>
+      <td>6.1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>14.0</td>
+      <td>5.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>11.8</td>
+      <td>6.3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>14.4</td>
+      <td>6.1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>13.5</td>
+      <td>5.9</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4996</th>
+      <td>1</td>
+      <td>13.6</td>
+      <td>5.1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>4997</th>
+      <td>1</td>
+      <td>11.9</td>
+      <td>5.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>4998</th>
+      <td>1</td>
+      <td>12.9</td>
+      <td>5.7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>4999</th>
+      <td>1</td>
+      <td>13.2</td>
+      <td>6.2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>5000</th>
+      <td>1</td>
+      <td>15.4</td>
+      <td>5.4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+    </tr>
+  </tbody>
+</table>
+<p>5001 rows × 8 columns</p>
+</div></div></div>
+</div>
+<p>Great! Now, in order for Python to be able to read this a little easier, we can convert gender to a number. To do this, we can enter the following command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_df</span><span class="p">[</span><span class="s1">&#39;gender_num&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s2">&quot;Female&quot;</span> <span class="k">else</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">gender</span> <span class="ow">in</span> <span class="n">gender_df</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What this does is first assigns the output to a column in gender_df called gender_num.</p>
+<p>Next, it states that for each gender in gender_df[‘gender’], if it is female, we assign the corresponding value in gender_num to be 0. Otherwise, we assign it to be 1 (the “else 1” does this)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>long_hair</th>
+      <th>forehead_width_cm</th>
+      <th>forehead_height_cm</th>
+      <th>nose_wide</th>
+      <th>nose_long</th>
+      <th>lips_thin</th>
+      <th>distance_nose_to_lip_long</th>
+      <th>gender</th>
+      <th>gender_num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>11.8</td>
+      <td>6.1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>14.0</td>
+      <td>5.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>11.8</td>
+      <td>6.3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>14.4</td>
+      <td>6.1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>13.5</td>
+      <td>5.9</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4996</th>
+      <td>1</td>
+      <td>13.6</td>
+      <td>5.1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4997</th>
+      <td>1</td>
+      <td>11.9</td>
+      <td>5.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4998</th>
+      <td>1</td>
+      <td>12.9</td>
+      <td>5.7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4999</th>
+      <td>1</td>
+      <td>13.2</td>
+      <td>6.2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5000</th>
+      <td>1</td>
+      <td>15.4</td>
+      <td>5.4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>5001 rows × 9 columns</p>
+</div></div></div>
+</div>
+<p>Next, to train the model, we’ll want to install and import the following two packages and modules.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install numpy
+<span class="o">!</span>pip install scikit-learn
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /Users/schugani/opt/anaconda3/lib/python3.9/site-packages (1.21.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in /Users/schugani/opt/anaconda3/lib/python3.9/site-packages (1.0.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy&gt;=1.1.0 in /Users/schugani/opt/anaconda3/lib/python3.9/site-packages (from scikit-learn) (1.7.3)
+Requirement already satisfied: numpy&gt;=1.14.6 in /Users/schugani/opt/anaconda3/lib/python3.9/site-packages (from scikit-learn) (1.21.5)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /Users/schugani/opt/anaconda3/lib/python3.9/site-packages (from scikit-learn) (2.2.0)
+Requirement already satisfied: joblib&gt;=0.11 in /Users/schugani/opt/anaconda3/lib/python3.9/site-packages (from scikit-learn) (1.1.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll use numpy to convert our data set into an array, and train_test_split to split our data into training and testing sets. This is important because we are utilizing a process called supervised learning.</p>
+<p>Supervised learning is giving the computer data that tells it what’s right and what’s wrong, and based on that data, it asks it to predict new data. Training data is the data that tells the computer what to do, and testing data contains the computer’s predictions. Based on its predictions, we can tell how accurate the model is, and deem whether or not it is good enough to predict new data not in the data set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>long_hair</th>
+      <th>forehead_width_cm</th>
+      <th>forehead_height_cm</th>
+      <th>nose_wide</th>
+      <th>nose_long</th>
+      <th>lips_thin</th>
+      <th>distance_nose_to_lip_long</th>
+      <th>gender</th>
+      <th>gender_num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>11.8</td>
+      <td>6.1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>14.0</td>
+      <td>5.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>11.8</td>
+      <td>6.3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>14.4</td>
+      <td>6.1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>13.5</td>
+      <td>5.9</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4996</th>
+      <td>1</td>
+      <td>13.6</td>
+      <td>5.1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4997</th>
+      <td>1</td>
+      <td>11.9</td>
+      <td>5.4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4998</th>
+      <td>1</td>
+      <td>12.9</td>
+      <td>5.7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4999</th>
+      <td>1</td>
+      <td>13.2</td>
+      <td>6.2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5000</th>
+      <td>1</td>
+      <td>15.4</td>
+      <td>5.4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Male</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>5001 rows × 9 columns</p>
+</div></div></div>
+</div>
+<p>First, we’ll want to split our data set into predictors and response. Our response is gender_num and our predictors are everything except gender and gender_num</p>
+<p>We can convert our predictors and responses to arrays with the np.array command. Note that when we are selecting multiple columns from a data frame, we’ll want to include double brackets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gender_df</span><span class="p">[[</span><span class="s1">&#39;long_hair&#39;</span><span class="p">,</span> <span class="s1">&#39;forehead_width_cm&#39;</span><span class="p">,</span> <span class="s1">&#39;forehead_height_cm&#39;</span><span class="p">,</span> <span class="s1">&#39;nose_wide&#39;</span><span class="p">,</span> <span class="s1">&#39;nose_long&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;lips_thin&#39;</span><span class="p">,</span> <span class="s1">&#39;distance_nose_to_lip_long&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gender_df</span><span class="p">[</span><span class="s1">&#39;gender_num&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we can use the train_test_split function to split our data set up. Based on the x and y arrays, this splits it up into 4 variables. X_train and y_train contain the training set, and X_test and y_test contain the testing test. The test_size is 0.2, or 20% of our data, and random_state=42 just means that we have a different seed for randomization, enabling more consistent results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After that, we’ll want to import tree from sklearn to train a decision tree.</p>
+<p>A decision tree uses a tree structure to determine the response. For example, it could say “if someone has long hair and brown eyes, they are a woman”. We will visualize this later, so don’t worry if you don’t fully understand it now!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will want to set a variable with a name of our choice (in this case, clf) to a decision tree classifier to tell Python we want to use a decision tree. A decision tree is made up of a bunch of if statements – for example, from our previous example of “if someone has long hair and brown eyes, they are a woman”, there are 2 conditions for being a woman, with a depth of 2. Here, we can specify max_depth to be 3 to make this easier to visualize.</p>
+<p>We then fit this model on our training data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we can define the feature names (predictors) and class names (responses) to tell Python the names of the predictors and responses. Note that for class names, they are the names of each group of the response (male and female), not the name of the response itself (gender_num)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;long_hair&#39;</span><span class="p">,</span> <span class="s1">&#39;forehead_width_cm&#39;</span><span class="p">,</span> <span class="s1">&#39;forehead_height_cm&#39;</span><span class="p">,</span> <span class="s1">&#39;nose_wide&#39;</span><span class="p">,</span> <span class="s1">&#39;nose_long&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;lips_thin&#39;</span><span class="p">,</span> <span class="s1">&#39;distance_nose_to_lip_long&#39;</span><span class="p">]</span>
+<span class="n">class_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the export_text function imported from sklearn.tree, we can print our the tree rules. We can see, for example, that if distance_nose_to_lip_long &lt;= 0.5 (meaning that if the distance from the subject’s nose to lip is short), nose_wide &lt;= 0.5 (the subject’s nose is not wide), and forehead_width_cm &lt;= 14.35 (the width of the subject’s forehead, in cm, is &lt;= 14.35), we predict that the subject is a woman.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import relevant functions</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">export_text</span>
+<span class="c1">#export the decision rules</span>
+<span class="n">tree_rules</span> <span class="o">=</span> <span class="n">export_text</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
+                        <span class="n">feature_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">feature_names</span><span class="p">),</span>
+                        <span class="p">)</span>
+<span class="c1">#print the result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tree_rules</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|--- distance_nose_to_lip_long &lt;= 0.50
+|   |--- nose_wide &lt;= 0.50
+|   |   |--- forehead_width_cm &lt;= 14.35
+|   |   |   |--- class: 0
+|   |   |--- forehead_width_cm &gt;  14.35
+|   |   |   |--- class: 1
+|   |--- nose_wide &gt;  0.50
+|   |   |--- nose_long &lt;= 0.50
+|   |   |   |--- class: 0
+|   |   |--- nose_long &gt;  0.50
+|   |   |   |--- class: 1
+|--- distance_nose_to_lip_long &gt;  0.50
+|   |--- nose_wide &lt;= 0.50
+|   |   |--- lips_thin &lt;= 0.50
+|   |   |   |--- class: 0
+|   |   |--- lips_thin &gt;  0.50
+|   |   |   |--- class: 1
+|   |--- nose_wide &gt;  0.50
+|   |   |--- nose_long &lt;= 0.50
+|   |   |   |--- class: 1
+|   |   |--- nose_long &gt;  0.50
+|   |   |   |--- class: 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>To visualize this as a graph, we can import the graphviz package</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>First, we’ll want to define the data. We are using the clf model, with no file to save the graph to. The feature and class names have been defined. filled=True colors the boxed in and rounded=True makes the corners of the boxes round,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+                     <span class="n">feature_names</span><span class="o">=</span><span class="n">feature_names</span><span class="p">,</span>
+                     <span class="n">class_names</span> <span class="o">=</span> <span class="n">class_names</span><span class="p">,</span>
+                     <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>  
+<span class="n">graph</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/python_tutorial26_31_0.svg" src="_images/python_tutorial26_31_0.svg" /></div>
+</div>
+<p>For each box, we are given a prediction. For example, if no information is given (the top box), we predict the subject to be male. However, the actual predictions given all the data come at the bottom row. Moving from the top down and to the left, if distance_nose_lip_long &lt;= 0.5, nose_wide &lt;= 0.5 and forehead_width_cm &lt;= 14.35, we predict the subject to be female (as shown by class=Female). Moving to the right, if distance_nose_lip_long is not &lt;= 14.35 (so distance_nose_lip_long &gt; 14.35), nose_wide &gt; 0.5, and nose_long &gt; 0.5, we predict the subject to be male.</p>
+<p>To find the accuracy of these predictions, we can use the testing data. First, we set y_pred to the predicted values based on the X_test data using the predict() function. Next, we can obtain an accuracy score based on said predictions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.962037962037962
+</pre></div>
+</div>
+</div>
+</div>
+<p>This means that we were correct on approximately 96.2% of our model’s guesses, which is pretty good!</p>
+<p>Another form of machine learning is linear regression. Thinking of y=mx+b, this is essentially plotting a line of best fit, but for a lot more variables in this case.</p>
+<p>First, we’ll want to import the LinearRegression module, fit the model on the training data, and predict based on the testing inputs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_lr</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we’ll want to clean the data. Since the responses are either 0 or 1, it wouldn’t make sense to have guesses outside of that range. Therefore, if the guess (i) is &lt; 0, it is set to 0, otherwise it is kept. Next, if it is &gt;1, it is set to 1 – otherwise, it stays the same</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred_lr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">y_pred_lr</span><span class="p">]</span>
+<span class="n">y_pred_lr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">y_pred_lr</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">y_pred_lr</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 0, 0.23657445504473162, 1, 1, 0.7894454269214858, 1, 0.7582110815230724, 0.7086266542171241, 0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>To analyze our results, we can’t use the accuracy_score function as our guesses are continuous – they don’t always fall on 0 or 1. Thus, we will want to find the mean absolute error. For example, if the value is 1 and our guess is 0.95, our mean absolute error is abs(1-0.95) = 0.05. This is the same calculation as our accuracy score. If we subtract our mean absolute error from 1, we can get our approximate value for how many predictions we got right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">-</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_lr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8824289995408384
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">-</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.962037962037962
+</pre></div>
+</div>
+</div>
+</div>
+<p>The linear regression model only has an accuracy of about 88.2%, so our decision tree model seems to fit better.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="python_tutorial24.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">More Pandas</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Sahil Chugani<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
