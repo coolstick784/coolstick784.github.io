@@ -1,0 +1,29 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: python_tutorial1
+- file: python_tutorial2
+- file: python_tutorial3
+- file: python_tutorial4
+- file: python_tutorial5
+- file: python_tutorial6
+- file: python_tutorial7
+- file: python_tutorial8
+- file: python_tutorial9
+- file: python_tutorial10
+- file: python_tutorial11
+- file: python_tutorial12
+- file: python_tutorial13
+- file: python_tutorial15
+- file: python_tutorial16
+- file: python_tutorial17
+- file: python_tutorial18
+- file: python_tutorial19
+- file: python_tutorial20
+- file: python_tutorial22
+- file: python_tutorial23
+- file: python_tutorial24
+- file: python_tutorial26
