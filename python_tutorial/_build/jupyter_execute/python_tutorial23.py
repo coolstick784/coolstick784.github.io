@@ -85,13 +85,13 @@ new_path = os.path.join(new_dir, "data.csv")
 os.rename(old_path, new_path)
 
 
-# In[166]:
+# In[10]:
 
 
 os.chdir(new_dir)
 
 
-# In[167]:
+# In[11]:
 
 
 os.listdir()
@@ -101,7 +101,7 @@ os.listdir()
 
 # To change our directory back to the old one, we can call the chdir() function with the old path (that we saved as cur_path)
 
-# In[168]:
+# In[12]:
 
 
 os.chdir(cur_path)
